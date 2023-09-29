@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        nav{
+            display: flex;
+            display: inline;
+            padding: 20px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .lista-des li{
+            display: inline;
+            padding: 30px;
+            font-size: 20px;
+        }
+
+        .logo {
+            display: flex;
+        }
+
+        .Myslides {
+            display: none;
+            max-width: 50%;
+        }
+
+        .card {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .message-card {
+            color: white;
+            display: flex;
+            flex-direction: column; 
+        }
+
+        .message-card p {
+            margin: 0; 
+        }
+
+        main{
+            background-image: linear-gradient(rgb(29, 28, 28), rgb(61, 54, 54));
+        }
+
+        body {
+            background-color: #f5f1f1;
+            padding: 20px;
+        }
+
+        .message-card {
+            padding: 20px;
+            
+        }
+
+        .container-card {
+            display: flex;
+            margin-top: 10px;
+        }
+
+        .container-store{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #FFE177;
+        }
+
+        .message-store {
+            color: #333;
+            flex: 1;
+            padding: 20px;
+        }
+
+        .store-image{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .container-colors{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .first-color {
+            width: 50%;
+            height: 200px;
+            background-color: rgb(57, 57, 133);
+            border: 1px solid black;
+        }
+
+        .second-color {
+            width: 50%;
+            height: 200px;
+            background-color: rgb(128, 133, 57);
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+    <header>
+        <div class="logo">
+        <img src="coins.png" alt="Logo">
+        <h1>Site com Flexbox</h1>
+        </div>
+
+        <nav>
+            <ul class="lista-des">
+                
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+ 
+    <main>
+    <div class="w3-content w3-display-container">
+        <img class="mySlides" src="https://cutewallpaper.org/27/black-videogame-wallpaper/1106529201.jpg" style="width:100%">
+        <img class="mySlides" src="https://wallpaperaccess.com/full/5590114.jpg" style="width:100%">
+        <img class="mySlides" src="https://edge.mwallpapers.com/photos/celebrities/games/ragnar-lothbrok-assassins-creed-valhalla-2020-android-iphone-hd-wallpaper-downloadhd-wallpapers-desktop-background-android-iphone-1080p-4k-ooahy.jpg" style="width:100%">
+        <img class="mySlides" src="https://c4.wallpaperflare.com/wallpaper/493/371/733/dark-souls-iii-4k-dark-souls-3-dark-souls-soul-of-cinder-hd-wallpaper-preview.jpg" style="width:100%">
+      
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+      </div>
+
+
+    <div class="container-card">
+      <div class="message-card">
+        <h3>Baldurs Gate 3</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia blanditiis quae at aspernatur harum commodi atque molestiae inventore enim. Quia ipsum laudantium veritatis est eius quae quod sit molestias architecto!</p>
+    </div>
+
+    <div class="card">
+            <img src="https://hardzone.es/app/uploads-hardzone.es/2020/08/baldurs-gate-3-1268x664-1.jpg?x=480&y=375&quality=40" alt="baldurs gate">
+
+    </div>
+    </div>
+
+    <div class="container-store">
+        <div class="message-store">
+            <h3>Our Store</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat blanditiis sit consectetur quisquam, beatae, illo, amet eum esse quos quo quam officiis ea perspiciatis expedita distinctio tempore? Exercitationem, aut iusto.</p>
+        </div>
+
+        <div class="store-image">
+            <img src="https://cdn.awsli.com.br/300x300/1760/1760811/produto/79817713/d5bb089e0e.jpg" alt="Card Store">
+            <img src="https://cdn.awsli.com.br/300x300/1760/1760811/produto/79817713/d5bb089e0e.jpg" alt="Card Store">
+        </div>
+    </div>
+     
+
+    <div class="container-colors">
+
+        <div class="first-color"></div>
+        <div class="second-color"></div>
+
+    </div>
+
+
+
+    </main>
+      
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+        
+        function plusDivs(n) {
+          showDivs(slideIndex += n);
+        }
+        
+        function showDivs(n) {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          if (n > x.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = x.length}
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          x[slideIndex-1].style.display = "block";  
+        }
+        </script>
+        
+        </body>
+        </html>
+
+
+
+</body>
+</html>

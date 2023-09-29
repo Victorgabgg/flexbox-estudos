@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="luigi tineli e victor gabriel guimarães">
+    <meta name="description" content="site sobre uma empresa de jogos">
+    <meta name="keywords" content="jogos, desenvolvimento, dark souls, flexbox">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Jogo</title>
+</head>
+<body>
+    <header>
+        
+        <div class="head">
+        <div class="logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/2838/2838912.png" alt="icone" width="100">
+        </div>
+        <nav>
+            <ul class="lista">
+                <li><a href="#sobre">Sobre os jogos</a></li>
+                <li><a href="#texto">Texto</a></li>
+                <li><a href="#tabela">Tabela</a></li>
+                <li><a href="#formulario">Formulário</a></li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+
+
+    <main>
+
+        <h3 class="w3-center">Alguns exemplos de jogos</h3>
+
+        <div class="w3-content w3-display-container">
+        <img class="mySlides" src="https://wallpapers.com/images/featured/assassins-creed-valhalla-tiswxpekr3su98uv.jpg" style="width:100%">
+        <img class="mySlides" src="https://wallpapercave.com/wp/wp2695324.jpg" style="width:100%">
+        <img class="mySlides" src="https://wallpapers.com/images/featured/games-z34ugdt7kl563g2f.jpg" style="width:100%">
+        <img class="mySlides" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXRd5SkJLn3CIzXKsm_Wj7W_S73Jf0jM6yXA&usqp=CAU" style="width:100%">
+
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+
+        <div class="container-card" id="sobre">
+            <div class="message-card">
+                <h3><b>Sobre os jogos</b></h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur tempora aliquid, impedit optio sequi ullam esse sit itaque illum distinctio nam obcaecati possimus, iusto quidem, fugit nisi! Est, ratione fugiat.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus possimus unde mollitia atque dolores! Earum ea tenetur, maiores iste adipisci laboriosam! Ratione voluptates excepturi in nihil, accusantium laborum veniam et!</p>
+            </div>
+
+            <div class="card">
+                <img src="https://cards.hearthpwn.com/enUS/LETL_846P2_01.png?185749" alt="Carta">
+            </div>
+
+
+            </div>
+
+            <div class="container-sobre" id="texto">
+                <div class="primeira">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae magni eum iure quam perspiciatis ab, nulla soluta amet omnis vitae aspernatur minima laudantium cupiditate cum libero dolorem nostrum non commodi!</p>
+                </div>
+
+                <div class="segunda">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut vero omnis, distinctio soluta pariatur inventore iste quod sapiente alias eius nulla reprehenderit repellat, consequatur quae optio velit perspiciatis! Ex, maiores.</p>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <div class="container-table" id="tabela">
+           <div class="table">
+
+            <table>
+                <tr>
+                <th>Nome do jogo</th>
+                <th>Data de lançamento</th>
+ 
+
+                </tr>
+
+                <tr>
+                    <td>Dark Souls</td>
+                    <td>2000</td>
+                </tr>
+                <tr>
+                    <td>Dark Souls 2</td>
+                    <td>2004</td>
+                </tr>
+                <tr>
+                    <td>Dark Souls 3</td>
+                    <td>2010</td>
+                </tr>
+                <tr>
+                    <td>Bloodborne</td>
+                    <td>2015</td>
+                </tr>
+            </table>
+           </div>
+
+        </div>
+
+        <div class="container-form" id="formulario">
+
+
+            <div class="form">
+
+                <form action="index.html" method="GET">
+
+                    <label for="nome">Nome</label><br>
+                    <input type="text" name="nome" placeholder="Nome"><br><br>
+
+                    <label for="email">E-mail</label><br>
+                    <input type="email" name="email" placeholder="E-mail"><br><br>
+
+                    <label for="mensagem">Mensagem</label><br>
+                    <textarea id="mensagem" name="mensagem" rows="4" cols="35" placeholder="Mensagem"></textarea><br><br>
+
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Reset">
+
+                    
+    
+                </form>
+    
+
+
+            </div>
+         
+
+        </div>
+
+
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+        
+        function plusDivs(n) {
+          showDivs(slideIndex += n);
+        }
+        
+        function showDivs(n) {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          if (n > x.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = x.length}
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          x[slideIndex-1].style.display = "block";  
+        }
+        </script>
+        
+    </main>
+</body>
+</html>
